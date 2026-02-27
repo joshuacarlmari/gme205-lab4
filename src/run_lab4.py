@@ -34,20 +34,20 @@ def main():
 
 
     total_area = analysis.total_active_area(parcels)
-    large_parcels = analysis.parcels_above_threshold(parcels, 500)
+    parcels_threshold = analysis.parcels_above_threshold(parcels, 5000)
     zone_counts = analysis.count_by_zone(parcels)
     residential_parcels = analysis.intersecting_parcels(parcels, "Residential")
 
 
     print("Total Active Area:", total_area)
-    print("Parcels Above Threshold:", [p.parcel_id for p in large_parcels])
+    print("Parcels Above Threshold (5000 sqm):", [p.parcel_id for p in parcels_threshold])
     print("Parcels per Zone:", zone_counts)
-    print("Residential Parcels:", [p.parcel_id for p in residential_parcels])
+    print("Parcels Suitable for Development (Residential):", [p.parcel_id for p in residential_parcels])
 
 
     summary = {
         "total_active_area": total_area,
-        "parcels_above_threshold": [p.parcel_id for p in large_parcels],
+        "parcels_above_threshold": [p.parcel_id for p in parcels_threshold],
         "zone_counts": zone_counts,
         "residential_parcels": [p.parcel_id for p in residential_parcels]
     }

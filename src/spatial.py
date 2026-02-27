@@ -5,7 +5,7 @@ class SpatialObject:
         self.geometry = shape(geometry)
 
     def area(self):
-        return self.geometry.area
+        return self._area_sqm
 
 
 class Parcel(SpatialObject):
