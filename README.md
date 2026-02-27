@@ -45,7 +45,7 @@
 ###  END IF
 ## END FOR
 
-## SET threshold = user_defined_value
+## SET threshold = 5000
 ## CREATE empty list large_parcels
 
 ## FOR each parcel IN parcel_list DO
