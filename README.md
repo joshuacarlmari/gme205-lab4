@@ -20,3 +20,64 @@
 ## xii. Display results
 ## xiii. Save summary results to output file
 ## xiv. END
+#
+#
+#
+#
+# Pseudocode
+# BEGIN
+
+# LOAD parcel_data from JSON file
+
+# CONVERT parcel_data into Parcel objects
+# STORE in parcel_list
+
+# IF parcel_list is empty THEN
+##  PRINT "No parcels found."
+##  STOP
+# END IF
+
+# SET total_active_area = 0
+
+# FOR each parcel IN parcel_list DO
+##  IF parcel is active THEN
+##      total_active_area = total_active_area + parcel.area()
+##  END IF
+# END FOR
+
+# SET threshold = user_defined_value
+# CREATE empty list large_parcels
+
+# FOR each parcel IN parcel_list DO
+##  IF parcel.area() > threshold THEN
+##      ADD parcel to large_parcels
+##  END IF
+## END FOR
+
+# CREATE empty dictionary zone_counts
+
+# FOR each parcel IN parcel_list DO
+##  IF parcel.zone NOT IN zone_counts THEN
+##      zone_counts[parcel.zone] = 0
+#   END IF
+
+##      zone_counts[parcel.zone] = zone_counts[parcel.zone] + 1
+# END FOR
+
+# SET development_zone = "Residential"
+# CREATE empty list development_parcels
+
+# FOR each parcel IN parcel_list DO
+##  IF parcel.zone == development_zone THEN
+##      ADD parcel to development_parcels
+##  END IF
+## END FOR
+
+# PRINT total_active_area
+# PRINT large_parcels
+# PRINT zone_counts
+# PRINT development_parcels
+
+# SAVE results to summary.json
+
+# END
