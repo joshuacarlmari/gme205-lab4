@@ -33,12 +33,7 @@ def count_by_zone(parcels: list) -> dict:
 
 
 def intersecting_parcels(parcels: list, zone: str) -> list:
-    """
-    For this lab:
-    'Intersection' is defined as parcels suitable
-    for development by zone.
-    """
-
+    
     selected = []
 
     for parcel in parcels:
