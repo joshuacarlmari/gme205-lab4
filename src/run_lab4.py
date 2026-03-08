@@ -9,7 +9,7 @@ def load_parcels(filepath):
 
     parcels = []
 
-    for item in data:  # Repetition
+    for item in data:  
         parcel = Parcel(
             parcel_id=item["parcel_id"],
             zone=item["zone"],

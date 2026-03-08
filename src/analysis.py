@@ -1,8 +1,8 @@
 def total_active_area(parcels: list) -> float:
     total = 0.0
 
-    for parcel in parcels:  # Repetition
-        if parcel.is_active:  # Selection
+    for parcel in parcels:  
+        if parcel.is_active: 
             total += parcel.area()
 
     return total
